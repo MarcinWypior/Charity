@@ -1,14 +1,15 @@
 package pl.coderslab.charity.entities;
 
-import javax.persistence.Entity;
-import javax.persistence.Id;
+import javax.persistence.*;
 import javax.validation.constraints.NotEmpty;
 
 @Entity
 public class Institution {
     @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
     @NotEmpty
+    @Column(unique = true)
     private String name;
     private String description;
 
