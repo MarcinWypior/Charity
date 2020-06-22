@@ -35,20 +35,4 @@ public class HomeController {
     public String countTotalQuantity(){
         return donationService.countTotalQuantity().toString();
     }
-
-    @GetMapping("/form")
-    public String getForm(Model model) {
-        model.addAttribute("Donation", new Donation());
-        return "form";
-    }
-
-    @PostMapping("/form")
-    public String postForm(@Valid @ModelAttribute Donation donation, BindingResult bindingResult) {
-        return "redirect:/form";
-    }
-
-    @ModelAttribute("institutions")
-    public List<Institution> institutions(){
-        return institutionRepository.findAll();
-    }
 }
