@@ -22,15 +22,13 @@
             <em>${countOfTotalQuantity}</em>
 
             <h3>Oddanych worków</h3>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eius est beatae, quod accusamus illum
-                tempora!</p>
+            <p>Bóg zapłać</p>
         </div>
 
         <div class="stats--item">
             <em>${countOfDonations}</em>
             <h3>Przekazanych darów</h3>
-            <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Laboriosam magnam, sint nihil cupiditate quas
-                quam.</p>
+            <p>za wszystkie podarki jesteśmy bardzo wdzięczni.</p>
         </div>
 
     </div>
