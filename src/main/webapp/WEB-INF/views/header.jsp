@@ -1,5 +1,21 @@
+<%@ taglib prefix="sec" uri="http://www.springframework.org/security/tags" %>
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <header class="header--main-page">
+
+    <sec:authorize access="isAuthenticated()">
+        <p>Zalogowany jako: <sec:authentication property="principal.username"/></p>
+        <p>Posiada role: <sec:authentication property="principal.authorities"/></p>
+    </sec:authorize>
+
+    <sec:authorize access="isAuthenticated()">
+        <form action="<c:url value="/logout"/>" method="post">
+            <input type="submit" value="Wyloguj">
+            <input type="hidden" name="${_csrf.parameterName}" value="${_csrf.token}"/>
+        </form>
+    </sec:authorize>
+
+
     <nav class="container container--70">
         <ul class="nav--actions">
             <li><a href="" class="btn btn--small btn--without-border">Zaloguj</a></li>
@@ -21,6 +37,9 @@
                 Zacznij pomagać!<br/>
                 Oddaj niechciane rzeczy w zaufane ręce
             </h1>
+
+
+
         </div>
     </div>
 </header>

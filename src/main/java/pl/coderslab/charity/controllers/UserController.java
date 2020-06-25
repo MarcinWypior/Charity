@@ -35,4 +35,11 @@ public class UserController {
         return "Hello " + entityUser.getUsername();
     }
 
+    @GetMapping("/logout")
+    @ResponseBody
+    public String logout(@AuthenticationPrincipal CurrentUser customUser) {
+        User entityUser = customUser.getUser();
+        return "Hello " + entityUser.getUsername();
+    }
+
 }

@@ -8,6 +8,7 @@ import org.springframework.web.bind.annotation.PostMapping;
 import pl.coderslab.charity.entities.Category;
 import pl.coderslab.charity.entities.Donation;
 import pl.coderslab.charity.entities.Institution;
+import pl.coderslab.charity.entities.User;
 import pl.coderslab.charity.repositories.CategoryRepository;
 import pl.coderslab.charity.repositories.DonationRepository;
 import pl.coderslab.charity.repositories.InstitutionRepository;
